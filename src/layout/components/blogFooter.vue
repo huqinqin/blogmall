@@ -1,10 +1,10 @@
 <template>
-    
+    <div>3333</div>
 </template>
 
 <script>
     export default {
-        name: "blogHead"
+        name: "blogFooter"
     }
 </script>
 

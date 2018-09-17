@@ -2,10 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import main from '@/main'
-import plugin from '@/plugin'
-Vue.use(main)
-Vue.use(plugin)
+import {plugin1} from '@/plugin'
+
+Vue.use(plugin1)
 Vue.config.productionTip = false
 
 new Vue({

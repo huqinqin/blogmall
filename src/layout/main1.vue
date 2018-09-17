@@ -14,13 +14,23 @@
 </template>
 
 <script>
+    import blogHead from './components/blogHead'
+    import blogAside from './components/blogAside'
+    import blogContain from './components/blogContain'
+    import blogFooter from './components/blogFooter'
     export default {
-        name: "main"
+        name: "main1",
+        components: {
+            blogHead,
+            blogAside,
+            blogContain,
+            blogFooter
+        }
     }
 </script>
 
-<style lang="scss">
-   .layout{
+<style>
+   /*.layout{
        min-width: 1200px;
        .headarea{
            width: 100%;
@@ -40,5 +50,5 @@
        .footerarea{
            width: 100%;
        }
-   }
+   }*/
 </style>
