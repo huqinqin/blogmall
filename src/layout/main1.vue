@@ -15,19 +15,19 @@
 </template>
 
 <script>
-    import blogHead from './components/blogHead'
-    import blogAside from './components/blogAside'
-    import blogContain from './components/blogContain'
-    import blogFooter from './components/blogFooter'
-    export default {
-        name: "main1",
-        components: {
-            blogHead,
-            blogAside,
-            blogContain,
-            blogFooter
-        }
-    }
+import blogHead from './components/blogHead'
+import blogAside from './components/blogAside'
+import blogContain from './components/blogContain'
+import blogFooter from './components/blogFooter'
+export default {
+  name: 'main1',
+  components: {
+    blogHead,
+    blogAside,
+    blogContain,
+    blogFooter
+  }
+}
 </script>
 
 <style lang="scss">
@@ -45,8 +45,6 @@
        .mainarea{
            width: 100%;
            display: flex;
-           align-items: center;
-           justify-content: center;
            min-height: 100px;
            background-color: bisque;
            /*.asidearea{

@@ -11,12 +11,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect:'/home',
+      redirect: '/home',
       name: 'mainContent',
       component: mainContent,
       children: [
-            {path:'/home',name:'home',component:blogContain}
-        ]
+        { path: '/home', name: 'home', component: blogContain }
+      ]
     }
   ]
 })
