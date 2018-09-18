@@ -4,8 +4,9 @@
             <blog-head class="bloghead"></blog-head>
         </div>
         <main class="mainarea">
-            <blog-aside class="asidearea"></blog-aside>
-            <blog-contain class="containarea"></blog-contain>
+            <router-view></router-view>
+            <!--<blog-aside class="asidearea"></blog-aside>
+            <blog-contain class="containarea"></blog-contain>-->
         </main>
         <footer>
             <blog-footer class="footerarea"></blog-footer>
@@ -46,7 +47,9 @@
            display: flex;
            align-items: center;
            justify-content: center;
-           .asidearea{
+           min-height: 100px;
+           background-color: bisque;
+           /*.asidearea{
                flex: 0 0 200px;
                width: 200px;
                height: 200px;
@@ -57,7 +60,7 @@
                margin-left: 10px;
                height: 400px;
                background-color: chartreuse;
-           }
+           }*/
        }
        .footerarea{
            width: 100%;
