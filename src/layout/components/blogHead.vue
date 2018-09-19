@@ -14,12 +14,12 @@
 <script>
 export default {
   name: 'blogHead',
-    data(){
-      return{
-          img: require('@/assets/icon.jpg'),
-          input:''
-      }
+  data () {
+    return {
+      img: require('@/assets/icon.jpg'),
+      input: ''
     }
+  }
 }
 </script>
 

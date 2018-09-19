@@ -18,7 +18,7 @@ export default {
       categoryList: [
         {
           value: 'life',
-          childrens: ['情感', '杂谈','情感', '杂谈']
+          childrens: ['情感', '杂谈', '情感', '杂谈']
         },
         {
           value: 'web',
@@ -26,26 +26,26 @@ export default {
         }
 
       ],
-        currentIndex: '0',
-        show: false,
-        showItem: false
+      currentIndex: '0',
+      show: false,
+      showItem: false
     }
   },
-    computed: {
+  computed: {
+  },
+  methods: {
+    backIndex (index) {
+      this.currentIndex = index
+      this.showItem = true
     },
-    methods: {
-        backIndex (index) {
-            this.currentIndex = index
-            this.showItem = true
-        },
-        isShowCate() {
-            this.currentIndex = '0'
-            this.show = !this.show
-        },
-        hideItem() {
-            this.showItem = false
-        }
+    isShowCate () {
+      this.currentIndex = '0'
+      this.show = !this.show
+    },
+    hideItem () {
+      this.showItem = false
     }
+  }
 }
 </script>
 
