@@ -18,7 +18,7 @@ export default {
       categoryList: [
         {
           value: 'life',
-          childrens: ['情感77777777777777777777777', '杂谈','情感', '杂谈']
+          childrens: ['情感', '杂谈','情感', '杂谈']
         },
         {
           value: 'web',
@@ -97,6 +97,8 @@ export default {
               }
               .active{
                   color: red;
+                  font-size: 16px;
+                  font-weight: bold;
               }
               .childcate{
                   position: absolute;
@@ -110,6 +112,8 @@ export default {
                       writing-mode: horizontal-tb;
                       text-align: center;
                       cursor: pointer;
+                      float: left;
+                      width: 100px;
                   }
               }
           }
