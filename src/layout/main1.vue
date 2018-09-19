@@ -23,8 +23,6 @@ export default {
   name: 'main1',
   components: {
     blogHead,
-    blogAside,
-    blogContain,
     blogFooter
   }
 }

@@ -54,8 +54,9 @@ export default {
       width: 200px;
       text-align: center;
       border: 1px solid #ddd;
-      position: fixed;
+      position: absolute;
       z-index: 100;
+      margin-left: 40px;
       .catetitle{
           width: 100%;
           height: 40px;
