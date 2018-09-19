@@ -34,10 +34,13 @@ export default {
    .layout{
        width: 80%;
        margin: 0 auto;
+       background-color: #eee;
+       box-shadow: 0 0 3px 1px #ddd;
        .headarea{
            width: 100%;
-           min-height: 100px;
-           background-color: gray;
+           padding: 10px;
+           box-sizing: border-box;
+           border-bottom: 1px solid #ddd;
            .bloghead{
                width: 100%;
            }
@@ -46,7 +49,9 @@ export default {
            width: 100%;
            display: flex;
            min-height: 100px;
-           background-color: bisque;
+           padding: 10px;
+           box-sizing: border-box;
+           /*background-color: white;*/
            /*.asidearea{
                flex: 0 0 200px;
                width: 200px;

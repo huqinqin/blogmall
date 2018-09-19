@@ -1,6 +1,6 @@
 <template>
     <div class="dropdown">
-        <div class="catetitle"><span>category</span><i class="el-icon-arrow-down" @click="isShowCate"></i></div>
+        <div class="catetitle"><span style="font-weight: bold">类目</span><i class="el-icon-arrow-down" @click="isShowCate"></i></div>
         <ul v-if="show">
             <li v-for="(item,index) in categoryList" :key="index" @mouseenter="backIndex(index)" @mouseout="hideItem">
                 <span class="catelist" :class="currentIndex === index ? 'active' : ''"><span>{{item.value}}</span><i class="el-icon-arrow-right" v-if="item.childrens.length > 0"></i></span>
@@ -53,8 +53,9 @@ export default {
   .dropdown{
       width: 200px;
       text-align: center;
-      border: 1px solid #eee;
-      position: relative;
+      border: 1px solid #ddd;
+      position: fixed;
+      z-index: 100;
       .catetitle{
           width: 100%;
           height: 40px;
@@ -108,6 +109,7 @@ export default {
                   border-left: none;
                   writing-mode: vertical-lr;
                   height: 100%;
+                  background-color: white;
                   span{
                       writing-mode: horizontal-tb;
                       text-align: center;
