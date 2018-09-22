@@ -3,13 +3,15 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import { plugin1 } from '@/plugin'
-import { Button, Icon, Input } from 'element-ui'
+import { Button, Icon, Input, Carousel, CarouselItem} from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(plugin1)
 Vue.use(Button)
 Vue.use(Icon)
 Vue.use(Input)
+Vue.use(Carousel)
+Vue.use(CarouselItem)
 Vue.config.productionTip = false
 
 new Vue({

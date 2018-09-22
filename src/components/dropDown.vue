@@ -1,6 +1,6 @@
 <template>
     <div class="dropdown">
-        <div class="catetitle"><span style="font-weight: bold">类目</span><i class="el-icon-arrow-down" @click="isShowCate"></i></div>
+        <div class="catetitle"><span style="font-weight: bold">Category</span><i class="el-icon-arrow-down" @click="isShowCate"></i></div>
         <ul v-if="show">
             <li v-for="(item,index) in categoryList" :key="index" @mouseenter="backIndex(index)" @mouseout="hideItem">
                 <span class="catelist" :class="currentIndex === index ? 'active' : ''"><span>{{item.value}}</span><i class="el-icon-arrow-right" v-if="item.childrens.length > 0"></i></span>
