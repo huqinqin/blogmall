@@ -24,10 +24,10 @@
                     <h3>{{item.title}}</h3>
                     <ul>
                         <li class="articleIntro" v-for="(list,index1) in item.article" v-if="index1 < 2">
-                            <div class="img"><img src="" alt=""></div>
+                            <div class="img" @click="jump(list.id)"><img src="" alt=""></div>
                             <div class="articleRight">
-                                <p class="title">{{list.title}}</p>
-                                <p class="content1">{{list.content}}</p>
+                                <p class="title" @click="jump(list.id)">{{list.title}}</p>
+                                <p class="content1" @click="jump(list.id)">{{list.content}}</p>
                                 <p class="info">
                                     <span class="el-icon-tickets">{{list.category}}</span>
                                     <span class="el-icon-date">{{list.time}}</span>
@@ -47,12 +47,13 @@
 import dropDown from '@/components/dropDown'
 export default {
   name: 'blogContain',
-    data() {
+  data() {
       return {
           articleList: [
               {
                   title: 'new',
                   article: [{
+                      id: 1,
                       picture: '',
                       title: 'web',
                       content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
@@ -61,6 +62,7 @@ export default {
                       scan: 10,
                       talkNum: 100
                   },{
+                      id: 2,
                       picture: '',
                       title: 'web',
                       content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
@@ -73,6 +75,7 @@ export default {
               {
                   title: 'talk',
                   article: [{
+                      id: 3,
                       picture: '',
                       title: 'web',
                       content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
@@ -81,6 +84,7 @@ export default {
                       scan: 10,
                       talkNum: 100
                   },{
+                      id: 4,
                       picture: '',
                       title: 'web',
                       content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
@@ -91,6 +95,11 @@ export default {
                   }]
               }
           ]
+      }
+    },
+    methods: {
+      jump (index) {
+          this.$router.push({name: 'articles', params: {id: index}})
       }
     },
   components: {

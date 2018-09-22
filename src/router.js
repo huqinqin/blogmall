@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import mainContent from '@/layout/main1.vue'
 import blogContain from '@/layout/components/blogContain'
+import articles from '@/layout/components/articles'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
       children: [
         { path: '/home', name: 'home', component: blogContain }
       ]
+    },
+    {
+        path: '/articles/:id',
+        name: 'articles',
+        component: articles
     }
   ]
 })

@@ -4,10 +4,10 @@
 
 <script>
     export default {
-        name: "article"
+        name: "articles"
     }
 </script>
 
-<style scoped>
+<style lang="scss">
 
 </style>
