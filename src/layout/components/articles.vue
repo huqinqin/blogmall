@@ -25,24 +25,24 @@
 </template>
 
 <script>
-    import talkList from '@/components/talkList'
-    import publicTalk from '@/components/publicTalk'
-    export default {
-        name: "articles",
-        data () {
-            return{
-                talkList: [{
-                    name: '正式111',
-                    content: '12dhfkdshfkjdhgkjfhgkjfdhgjdfkghkfdjghfdkjghfkjdghfdkjhgkfdjhgkdjhskjhdgkfghkfdghkfdjhgjdfhgjdhgjdfhgjd',
-                    time: '2018-09-08'
-                }]
-            }
-        },
-        components: {
-            talkList,
-            publicTalk
-        }
+import talkList from '@/components/talkList'
+import publicTalk from '@/components/publicTalk'
+export default {
+  name: 'articles',
+  data () {
+    return {
+      talkList: [{
+        name: '正式111',
+        content: '12dhfkdshfkjdhgkjfhgkjfdhgjdfkghkfdjghfdkjghfkjdghfdkjhgkfdjhgkdjhskjhdgkfghkfdghkfdjhgjdfhgjdhgjdfhgjd',
+        time: '2018-09-08'
+      }]
     }
+  },
+  components: {
+    talkList,
+    publicTalk
+  }
+}
 </script>
 
 <style lang="scss">

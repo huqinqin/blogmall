@@ -45,9 +45,9 @@ export default {
     hideItem () {
       this.showItem = false
     },
-      jumpToTopic (keywords) {
-        this.$router.push({name: 'topicJoin',params: {title: keywords}})
-      }
+    jumpToTopic (keywords) {
+      this.$router.push({ name: 'topicJoin', params: { title: keywords } })
+    }
   }
 }
 </script>

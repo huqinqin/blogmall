@@ -36,73 +36,73 @@ import dropDown from '@/components/dropDown'
 import joinArticle from '@/components/joinArticle'
 export default {
   name: 'blogContain',
-  data() {
-      return {
-          articleList: [
-              {
-                  title: 'new',
-                  article: [{
-                      id: 1,
-                      picture: '',
-                      title: 'web',
-                      content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
-                      category: 'web',
-                      time: '2018-09-09',
-                      scan: 10,
-                      talkNum: 100
-                  },{
-                      id: 2,
-                      picture: '',
-                      title: 'web',
-                      content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
-                      category: 'web',
-                      time: '2018-09-09',
-                      scan: 10,
-                      talkNum: 100
-                  }]
-              },
-              {
-                  title: 'talk',
-                  article: [{
-                      id: 3,
-                      picture: '',
-                      title: 'web',
-                      content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
-                      category: 'web',
-                      time: '2018-09-08',
-                      scan: 10,
-                      talkNum: 100
-                  },{
-                      id: 4,
-                      picture: '',
-                      title: 'web',
-                      content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
-                      category: 'web',
-                      time: '2018-10-10',
-                      scan: 10,
-                      talkNum: 100
-                  }]
-              }
-          ],
-          carouselList: [{
-              value: '成长的岁月'
-          },{
-              value: '学习的路程'
-          },{
-              value: '人生的挫折'
-          },{
-              value: '里程碑'
+  data () {
+    return {
+      articleList: [
+        {
+          title: 'new',
+          article: [{
+            id: 1,
+            picture: '',
+            title: 'web',
+            content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
+            category: 'web',
+            time: '2018-09-09',
+            scan: 10,
+            talkNum: 100
+          }, {
+            id: 2,
+            picture: '',
+            title: 'web',
+            content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
+            category: 'web',
+            time: '2018-09-09',
+            scan: 10,
+            talkNum: 100
           }]
-      }
-    },
-    methods: {
-        jumpMessage() {
-          this.$router.push({name:'message'})
+        },
+        {
+          title: 'talk',
+          article: [{
+            id: 3,
+            picture: '',
+            title: 'web',
+            content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
+            category: 'web',
+            time: '2018-09-08',
+            scan: 10,
+            talkNum: 100
+          }, {
+            id: 4,
+            picture: '',
+            title: 'web',
+            content: 'vue是一个很好用的前端框架，利用数据驱动视图，MVVM',
+            category: 'web',
+            time: '2018-10-10',
+            scan: 10,
+            talkNum: 100
+          }]
         }
-    },
+      ],
+      carouselList: [{
+        value: '成长的岁月'
+      }, {
+        value: '学习的路程'
+      }, {
+        value: '人生的挫折'
+      }, {
+        value: '里程碑'
+      }]
+    }
+  },
+  methods: {
+    jumpMessage () {
+      this.$router.push({ name: 'message' })
+    }
+  },
   components: {
-      dropDown,
-      joinArticle
+    dropDown,
+    joinArticle
   }
 }
 </script>

@@ -6,21 +6,21 @@
 </template>
 
 <script>
-    import publicTalk from '@/components/publicTalk'
-    import talkList from '@/components/talkList'
-    export default {
-        name: "message",
-        components: {
-            publicTalk,
-            talkList
-        },
-        data(){
-            return{
-                title: '发表留言',
-                title1: '留言列表'
-            }
-        }
+import publicTalk from '@/components/publicTalk'
+import talkList from '@/components/talkList'
+export default {
+  name: 'message',
+  components: {
+    publicTalk,
+    talkList
+  },
+  data () {
+    return {
+      title: '发表留言',
+      title1: '留言列表'
     }
+  }
+}
 </script>
 
 <style scoped>

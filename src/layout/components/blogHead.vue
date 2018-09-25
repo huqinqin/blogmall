@@ -20,11 +20,11 @@ export default {
       input: ''
     }
   },
-    methods: {
-        jumpHome() {
-            this.$router.push({name: 'mainContent'})
-        }
+  methods: {
+    jumpHome () {
+      this.$router.push({ name: 'mainContent' })
     }
+  }
 
 }
 </script>

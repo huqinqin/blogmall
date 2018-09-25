@@ -15,34 +15,34 @@
 </template>
 
 <script>
-    export default {
-        name: "talkList",
-        props: {
-            title: {
-                default: '评论列表',
-                type: String
-            },
-            icon: {
-                default: 'el-icon-tickets',
-                type: String
-            },
-            talkList: {
-                default: () => {
-                    return[
-                        {
-                            name: '正式',
-                            content: '12dhfkdshfkjdhgkjfhgkjfdhgjdfkghkfdjghfdkjghfkjdghfdkjhgkfdjhgkdjhskjhdgkfghkfdghkfdjhgjdfhgjdhgjdfhgjd',
-                            time: '2018-09-08'
-                        }
-                    ]
-                },
-                type: Array
-            }
-        },
-        data() {
-            return{}
-        }
+export default {
+  name: 'talkList',
+  props: {
+    title: {
+      default: '评论列表',
+      type: String
+    },
+    icon: {
+      default: 'el-icon-tickets',
+      type: String
+    },
+    talkList: {
+      default: () => {
+        return [
+          {
+            name: '正式',
+            content: '12dhfkdshfkjdhgkjfhgkjfdhgjdfkghkfdjghfdkjghfkjdghfdkjhgkfdjhgkdjhskjhdgkfghkfdghkfdjhgjdfhgjdhgjdfhgjd',
+            time: '2018-09-08'
+          }
+        ]
+      },
+      type: Array
     }
+  },
+  data () {
+    return {}
+  }
+}
 </script>
 
 <style lang="scss">

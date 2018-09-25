@@ -17,20 +17,22 @@
 </template>
 
 <script>
-    export default {
-        name: "joinArticle",
-        props: {
-            articleItem: {
-                default: [],
-                type: Array
-            }
-        },
-        methods: {
-            jump (index) {
-                this.$router.push({name: 'articles', params: {id: index}})
-            },
-        }
+export default {
+  name: 'joinArticle',
+  props: {
+    articleItem: {
+      default: () => {
+        return []
+      },
+      type: Array
     }
+  },
+  methods: {
+    jump (index) {
+      this.$router.push({ name: 'articles', params: { id: index } })
+    }
+  }
+}
 </script>
 
 <style lang="scss">

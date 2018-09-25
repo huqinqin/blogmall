@@ -9,36 +9,36 @@
 </template>
 
 <script>
-    import E from 'wangeditor'
-    export default {
-        name: "publicTalk",
-        props: {
-            icon: {
-                default: 'el-icon-edit-outline',
-                type: String
-            },
-            title: {
-                default: '发表评论',
-                type: String
-            }
-        },
-        data() {
-            return {
-                editContent: ''
-            }
-        },
-        mounted() {
-            var editor = new E('#content');
-            editor.customConfig.onchange = (html) => {
-                this.editContent = html;
-                console.log(html);
-            }
-            editor.customConfig.linkImgCallback = function (url) {
-                console.log(url) // url 即插入图片的地址
-            }
-            editor.create()
-        }
+import E from 'wangeditor'
+export default {
+  name: 'publicTalk',
+  props: {
+    icon: {
+      default: 'el-icon-edit-outline',
+      type: String
+    },
+    title: {
+      default: '发表评论',
+      type: String
     }
+  },
+  data () {
+    return {
+      editContent: ''
+    }
+  },
+  mounted () {
+    var editor = new E('#content')
+    editor.customConfig.onchange = (html) => {
+      this.editContent = html
+      console.log(html)
+    }
+    editor.customConfig.linkImgCallback = function (url) {
+      console.log(url) // url 即插入图片的地址
+    }
+    editor.create()
+  }
+}
 </script>
 
 <style lang="scss">

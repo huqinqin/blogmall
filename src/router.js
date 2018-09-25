@@ -18,9 +18,9 @@ export default new Router({
       component: mainContent,
       children: [
         { path: '/home', name: 'home', component: blogContain },
-        { path: '/articles/:id', name: 'articles', component: articles},
-          {path: '/message', name: 'message', component: message},
-          {path: '/topicJoin/:title', name: 'topicJoin', component: topicJoin}
+        { path: '/articles/:id', name: 'articles', component: articles },
+        { path: '/message', name: 'message', component: message },
+        { path: '/topicJoin/:title', name: 'topicJoin', component: topicJoin }
       ]
     }
   ]
