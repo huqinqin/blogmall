@@ -63,7 +63,6 @@ export default {
        }
        .footerarea{
            width: 100%;
-           height: 300px;
            background-color: beige;
        }
    }

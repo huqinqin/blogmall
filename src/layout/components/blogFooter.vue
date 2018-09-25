@@ -1,11 +1,16 @@
 <template>
     <div class="blogfoot">
-        <ul class="demo">
-            <li class="demolist"><p>22222222222</p></li>
-            <li class="demolist"><p>3333333</p></li>
-            <li class="demolist"><p>444444</p></li>
-            <li class="demolist"><p>5555555</p></li>
-            <li class="demolist"><p>66666666</p></li>
+        <ul class="first">
+                <li><a>www.baidu.com</a></li>
+                <li><a>www.baidu.com</a></li>
+                <li><a>www.baidu.com</a></li>
+                <li><a>www.baidu.com</a></li>
+        </ul>
+        <ul class="second">
+                <li><a>www.baidu.com</a></li>
+                <li><a>www.baidu.com</a></li>
+                <li><a>www.baidu.com</a></li>
+                <li><a>www.baidu.com</a></li>
         </ul>
     </div>
 </template>
@@ -18,16 +23,20 @@ export default {
 
 <style lang="scss">
    .blogfoot{
-       position: relative;
-       .demo{
-           position: absolute;
-           height: 220px;
-           width: 100%;
-           writing-mode: vertical-lr;
-           .demolist{
-               float: left;
-               width: 100px;
-               writing-mode: horizontal-tb;
+       display: flex;
+       align-items: center;
+       box-sizing: border-box;
+       padding: 10px;
+       .first{
+           flex: 0 0 200px;
+           li{
+               line-height: 18px;
+           }
+       }
+       .second{
+           flex: 0 0 200px;
+           li{
+               line-height: 18px;
            }
        }
    }

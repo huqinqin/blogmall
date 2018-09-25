@@ -13,8 +13,8 @@
         </div>
         <div class="block">
             <el-carousel :interval="4000" type="card" height="200px">
-                <el-carousel-item v-for="item in 4" :key="item">
-                    <h3>{{ item }}</h3>
+                <el-carousel-item v-for='(item, index) in carouselList' :key='index'>
+                    <h3>{{ item.value }}</h3>
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -83,7 +83,16 @@ export default {
                       talkNum: 100
                   }]
               }
-          ]
+          ],
+          carouselList: [{
+              value: '成长的岁月'
+          },{
+              value: '学习的路程'
+          },{
+              value: '人生的挫折'
+          },{
+              value: '里程碑'
+          }]
       }
     },
     methods: {
