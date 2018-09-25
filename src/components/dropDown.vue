@@ -3,8 +3,8 @@
         <div class="catetitle"><span style="font-weight: bold">Category</span><i class="el-icon-arrow-down" @click="isShowCate"></i></div>
         <ul v-if="show">
             <li v-for="(item,index) in categoryList" :key="index" @mouseenter="backIndex(index)" @mouseout="hideItem">
-                <span class="catelist" :class="currentIndex === index ? 'active' : ''"><span>{{item.value}}</span><i class="el-icon-arrow-right" v-if="item.childrens.length > 0"></i></span>
-                <span class="childcate" v-if="currentIndex === index && item.childrens.length > 0"><span  v-for="(itemList,index) in item.childrens" :key="index">{{itemList}}</span></span>
+                <span class="catelist" :class="currentIndex === index ? 'active' : ''" @click="jumpToTopic(item.value)"><span>{{item.value}}</span><i class="el-icon-arrow-right" v-if="item.childrens.length > 0"></i></span>
+                <span class="childcate" v-if="currentIndex === index && item.childrens.length > 0"><span  v-for="(itemList,index) in item.childrens" :key="index"  @click="jumpToTopic(itemList)">{{itemList}}</span></span>
             </li>
         </ul>
     </div>
@@ -44,7 +44,10 @@ export default {
     },
     hideItem () {
       this.showItem = false
-    }
+    },
+      jumpToTopic (keywords) {
+        this.$router.push({name: 'topicJoin',params: {title: keywords}})
+      }
   }
 }
 </script>

@@ -23,19 +23,7 @@
                 <li v-for="(item, index) in articleList" :key="index" class="articlelist">
                     <h3>{{item.title}}</h3>
                     <ul>
-                        <li class="articleIntro" v-for="(list,index1) in item.article" v-if="index1 < 2">
-                            <div class="img" @click="jump(list.id)"><img src="" alt=""></div>
-                            <div class="articleRight">
-                                <p class="title" @click="jump(list.id)">{{list.title}}</p>
-                                <p class="content1" @click="jump(list.id)">{{list.content}}</p>
-                                <p class="info">
-                                    <span class="el-icon-tickets">{{list.category}}</span>
-                                    <span class="el-icon-date">{{list.time}}</span>
-                                    <span class="el-icon-view">{{list.scan}}</span>
-                                    <span class="el-icon-edit-outline">{{list.talkNum}}</span>
-                                </p>
-                            </div>
-                        </li>
+                        <join-article :articleItem="item.article"></join-article>
                     </ul>
                 </li>
             </ul>
@@ -45,6 +33,7 @@
 
 <script>
 import dropDown from '@/components/dropDown'
+import joinArticle from '@/components/joinArticle'
 export default {
   name: 'blogContain',
   data() {
@@ -98,15 +87,13 @@ export default {
       }
     },
     methods: {
-      jump (index) {
-          this.$router.push({name: 'articles', params: {id: index}})
-      },
         jumpMessage() {
           this.$router.push({name:'message'})
         }
     },
   components: {
-    dropDown
+      dropDown,
+      joinArticle
   }
 }
 </script>
@@ -175,50 +162,6 @@ export default {
                      border-bottom: 1px solid #eee;
                  }
                  ul{
-                     .articleIntro{
-                         width: 100%;
-                         display: flex;
-                         padding: 20px;
-                         box-sizing: border-box;
-                         background-color: white;
-                         margin-bottom: 10px;
-                         align-items: center;
-                         justify-content: center;
-                         .img{
-                             flex: 0 0 150px;
-                             width: 150px;
-                             img{
-                                 width: 100%;
-                                 height: 150px;
-                             }
-                         };
-                         .articleRight{
-                             margin-left: 10px;
-                             flex: 1;
-                             .title{
-                                 font-size: 14px;
-                                 font-weight: bold;
-                                 border-bottom: 1px solid #eee;
-                                 cursor: pointer;
-                             }
-                             .content1{
-                                 width:100%;
-                                 height: 100px;
-                                 overflow:hidden;
-                                 text-overflow:ellipsis;
-                                 white-space:nowrap;
-                                 font-size: 14px;
-                                 text-indent: 4px;
-                                 line-height: 30px;
-                                 cursor: pointer;
-                             }
-                             .info{
-                                 span{
-                                     margin-left: 20px;
-                                 }
-                             }
-                         }
-                     }
                  }
 
              }

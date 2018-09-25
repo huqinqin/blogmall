@@ -4,6 +4,7 @@ import mainContent from '@/layout/main1.vue'
 import blogContain from '@/layout/components/blogContain'
 import articles from '@/layout/components/articles'
 import message from '@/layout/components/message'
+import topicJoin from '@/layout/components/topicJoin'
 Vue.use(Router)
 
 export default new Router({
@@ -18,7 +19,8 @@ export default new Router({
       children: [
         { path: '/home', name: 'home', component: blogContain },
         { path: '/articles/:id', name: 'articles', component: articles},
-          {path: '/message', name: 'message', component: message}
+          {path: '/message', name: 'message', component: message},
+          {path: '/topicJoin/:title', name: 'topicJoin', component: topicJoin}
       ]
     }
   ]
