@@ -6,7 +6,7 @@
                 <div class="about">AboutMe</div>
             </div>
             <div class="breadright">
-                <div class="signup">talk</div>
+                <div class="signup" @click="jumpMessage">talk</div>
                 <div class="signup">sign in</div>
                 <div class="signup">sign up</div>
             </div>
@@ -100,7 +100,10 @@ export default {
     methods: {
       jump (index) {
           this.$router.push({name: 'articles', params: {id: index}})
-      }
+      },
+        jumpMessage() {
+          this.$router.push({name:'message'})
+        }
     },
   components: {
     dropDown
