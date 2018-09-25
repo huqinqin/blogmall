@@ -16,13 +16,9 @@ export default new Router({
       name: 'mainContent',
       component: mainContent,
       children: [
-        { path: '/home', name: 'home', component: blogContain }
+        { path: '/home', name: 'home', component: blogContain },
+        { path: '/articles/:id', name: 'articles', component: articles}
       ]
-    },
-    {
-        path: '/articles/:id',
-        name: 'articles',
-        component: articles
     }
   ]
 })
