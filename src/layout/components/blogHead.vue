@@ -1,7 +1,7 @@
 <template>
     <div class="blogHead">
         <div class="imgWrap">
-            <div class="headImg"><img :src="img" alt=""></div>
+            <div class="headImg" @click="jumpHome"><img :src="img" alt=""></div>
         </div>
         <div class="btnseach">
             <el-input v-model="input" placeholder="请输入相关的文章名字" class="search"></el-input>
@@ -19,7 +19,13 @@ export default {
       img: require('@/assets/icon.jpg'),
       input: ''
     }
-  }
+  },
+    methods: {
+        jumpHome() {
+            this.$router.push({name: 'mainContent'})
+        }
+    }
+
 }
 </script>
 
@@ -29,6 +35,7 @@ export default {
        align-items: center;
        justify-content: center;
        .imgWrap{
+           cursor: pointer;
            width: 400px;
            flex: 0 0 400px;
            display: flex;

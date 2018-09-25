@@ -1,6 +1,6 @@
 <template>
     <div class="talkList">
-        <h2 class="talktitle">{{title}}</h2>
+        <h2 class="talktitle" :class="icon">{{title}}</h2>
         <ul class="rate">
             <li v-for="(item, index) in talkList" :key="index">
                 <div class="img"><img src="" alt=""></div>
@@ -22,12 +22,20 @@
                 default: '评论列表',
                 type: String
             },
+            icon: {
+                default: 'el-icon-tickets',
+                type: String
+            },
             talkList: {
-                default: [{
-                  name: '正式',
-                  content: '12dhfkdshfkjdhgkjfhgkjfdhgjdfkghkfdjghfdkjghfkjdghfdkjhgkfdjhgkdjhskjhdgkfghkfdghkfdjhgjdfhgjdhgjdfhgjd',
-                  time: '2018-09-08'
-                }],
+                default: () => {
+                    return[
+                        {
+                            name: '正式',
+                            content: '12dhfkdshfkjdhgkjfhgkjfdhgjdfkghkfdjghfdkjghfkjdghfdkjhgkfdjhgkdjhskjhdgkfghkfdghkfdjhgjdfhgjdhgjdfhgjd',
+                            time: '2018-09-08'
+                        }
+                    ]
+                },
                 type: Array
             }
         },
@@ -56,6 +64,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 0 3px 1px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: white;
             .img{
                 flex: 0 0 100px;
                 width: 100px;

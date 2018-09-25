@@ -15,22 +15,32 @@
                 </p>
             </article>
         </div>
+        <div class="publicTalk">
+            <public-talk></public-talk>
+        </div>
         <div class="talk">
-           <talk-list></talk-list>
+           <talk-list :talkList="talkList"></talk-list>
         </div>
     </div>
 </template>
 
 <script>
     import talkList from '@/components/talkList'
+    import publicTalk from '@/components/publicTalk'
     export default {
         name: "articles",
         data () {
             return{
+                talkList: [{
+                    name: '正式111',
+                    content: '12dhfkdshfkjdhgkjfhgkjfdhgjdfkghkfdjghfdkjghfkjdghfdkjhgkfdjhgkdjhskjhdgkfghkfdghkfdjhgjdfhgjdhgjdfhgjd',
+                    time: '2018-09-08'
+                }]
             }
         },
         components: {
-            talkList
+            talkList,
+            publicTalk
         }
     }
 </script>
@@ -38,6 +48,7 @@
 <style lang="scss">
   .articles{
       .articleContent{
+          border-bottom: 1px solid #ddd;
           .title{
               text-align: center;
               font-size: 16px;
@@ -60,6 +71,9 @@
                   text-indent: 8px;
               }
           }
+      }
+      .publicTalk{
+          border-bottom: 1px solid #ddd;
       }
   }
 </style>

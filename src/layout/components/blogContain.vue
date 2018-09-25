@@ -196,6 +196,7 @@ export default {
                                  font-size: 14px;
                                  font-weight: bold;
                                  border-bottom: 1px solid #eee;
+                                 cursor: pointer;
                              }
                              .content1{
                                  width:100%;
@@ -206,6 +207,7 @@ export default {
                                  font-size: 14px;
                                  text-indent: 4px;
                                  line-height: 30px;
+                                 cursor: pointer;
                              }
                              .info{
                                  span{
